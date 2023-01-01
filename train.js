@@ -27,17 +27,21 @@ const calculator = function(num1, action, num2) {
     } else if(action === '/') {
         if(num1 === 0 || num2 === 0){
             return 'not valid to operate'
+        } else if(num1 / num2 % 1 !==0){
+            return parseFloat(num1 / num2).toFixed(1)
         } else{
             return num1 / num2
         }
     }  
 
-   
 }
 console.log(calculator(10, '+', 2));
 console.log(calculator(10, '-', 2));
 console.log(calculator(10, '*', 2));
 console.log(calculator(10, '/', 2));
+
+
+console.log(calculator(10, '/', 3));
 
 
 console.log(calculator(1 , '+', 0.5));
