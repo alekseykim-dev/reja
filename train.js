@@ -18,7 +18,6 @@ const calculator = function(num1, action, num2) {
     if(num1 ===  null || num1 % 1 !== 0 || num2 ===  null || num2 % 1 !== 0){
         return 'not valid to operate'
     }
-
     if(action === '+') {
         return num1 + num2
     } else if( action === '-') {
@@ -27,14 +26,12 @@ const calculator = function(num1, action, num2) {
         return num1 * num2
     } else if(action === '/') {
         return num1 / num2
-    } 
-
-
- 
+    }  
 }
 console.log(calculator(10, '+', 2));
 console.log(calculator(10, '-', 2));
 console.log(calculator(10, '*', 2));
 console.log(calculator(10, '/', 2));
 console.log(calculator(1 , '+', 0.6));
-console.log( calculator(  '+', 1));
+console.log(calculator(  '+', 1));
+console.log(calculator(2 ,'+', 3/4));
