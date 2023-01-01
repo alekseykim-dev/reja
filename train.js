@@ -25,13 +25,27 @@ const calculator = function(num1, action, num2) {
     } else if(action === '*') {
         return num1 * num2
     } else if(action === '/') {
-        return num1 / num2
+        if(num1 === 0 || num2 === 0){
+            return 'not valid to operate'
+        } else{
+            return num1 / num2
+        }
     }  
+
+   
 }
 console.log(calculator(10, '+', 2));
 console.log(calculator(10, '-', 2));
 console.log(calculator(10, '*', 2));
 console.log(calculator(10, '/', 2));
-console.log(calculator(1 , '+', 0.6));
+
+
+console.log(calculator(1 , '+', 0.5));
+console.log(calculator(0.5 , '+', 1));
 console.log(calculator(  '+', 1));
-console.log(calculator(2 ,'+', 3/4));
+console.log(calculator(1 ,'+', ));
+console.log(calculator(2 ,'+', 2/4));
+console.log(calculator(2/4 ,'+', 2));
+console.log(calculator(10, '/', 0));
+console.log(calculator(0, '/', 10));
+
