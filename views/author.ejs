@@ -62,25 +62,191 @@
                 <div class="marginer"></div>
 
                 <div class="left_2">
-                    <div class="info">Age: <%=user.age%></div>
-                    <div class="info">Residence: <%=user.residence%></div>
-                    <div class="info">Freelance: <%=user.freelance%></div>
-                    <div class="info">Address: <%=user.address%></div>
+                    <div class="info">
+                        <div class="data1 info_data">Age: </div>
+                        <div class="info_data"><%=user.age%></div>
+                    </div>
+                    <div class="info"> 
+                        <div class="data2 info_data">Residence: </div>
+                        <div class="info_data"><%=user.residence%></div>
+                    </div>
+                    <div class="info">
+                        <div class="data3 info_data">Freelance: </div>
+                        <div class="avail info_data"><%=user.freelance%></div>
+                    </div>
+                    <div class="info">
+                        <div class="data4 info_data">Address: </div>
+                        <div class="info_data"><%=user.address%></div>
+                    </div>
                 </div>
                 <div class="marginer"></div>
 
-                <div class="left_3"></div>
+                <div class="left_3"> Languages
+                    <div class="container"> 
+                        <div class="languages"><%=user.languages[0]%></div>
+                        <div class="languages">100%</div>
+                        <div class="chart languages_chart1"></div>
+
+
+                        <div class="languages"><%=user.languages[1]%></div>
+                        <div class="languages">80%</div>
+                        <div class="chart languages_chart2"></div>
+
+
+                        <div class="languages"><%=user.languages[2]%></div>
+                        <div class="languages">60%</div>
+                        <div class="chart languages_chart3"></div>
+                    </div>
+
+                </div>
                 <div class="marginer"></div>
 
-                <div class="left_4"></div>
+                <div class="left_4"> Skills
+                    <div class="container">
+                        <div class="languages"><%=user.skills[0]%></div>
+                        <div class="languages">90%</div>
+                        <div class="chart languages_chart1"></div>
+
+
+                        <div class="languages"><%=user.skills[1]%></div>
+                        <div class="languages">85%</div>
+                        <div class="chart languages_chart2"></div>
+
+
+                        <div class="languages"><%=user.skills[2]%></div>
+                        <div class="languages">80%</div>
+                        <div class="chart languages_chart3"></div>
+
+
+                        <div class="languages"><%=user.skills[3]%></div>
+                        <div class="languages">75%</div>
+                        <div class="chart languages_chart2"></div>
+
+
+                        <div class="languages"><%=user.skills[4]%></div>
+                        <div class="languages">85%</div>
+                        <div class="chart languages_chart3"></div>
+
+                    </div>
+                </div>
                 <div class="marginer"></div>
                 
-                <div class="left_5"></div>
-                <div class="marginer"></div>
-                
-            </div>
-            <div class="midd_frame"></div>
-            <div class="right_frame"></div>
+                <div class="left_5">
+                    <span class="extra">Extra Skills</span>
+                    <div class="left_5-items">
+                      <div class="font left_5-item">
+                        <img src="/author/icon/icons.svg" />
+                        <span><%=user.extra_skills[0]%></span>
+                      </div>
+                      <div class="font left_5-item">
+                        <img src="icon/icons.svg" />
+                        <span><%=user.extra_skills[1]%></span>
+                      </div>
+                      <div class="font left_5-item">
+                        <img src="icon/icons.svg" />
+                        <span><%=user.extra_skills[2]%></span>
+                      </div>
+                      <div class="font left_5-item">
+                        <img src="icon/icons.svg" />
+                        <span><%=user.extra_skills[3]%></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="marginer"></div>
+                </div>
+                <div class="midd_frame">
+                  <div class="mid_frame-top">
+                    <div class="frame-top-items">
+                      <div class="frame-top-item1">
+                        <div class="top-item1-title">
+                          <h1 class="param">
+                            Doctor neurologists <br />
+                            in OHSU Hospital
+                          </h1>
+                        </div>
+                        <div class="top-item1-desc">
+                          <p class="para">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+                            volutpat feugiat placerat lobortis. Natoque rutrum semper
+                            sed suspendisse nunc lectus.
+                          </p>
+                        </div>
+                        <button class="btn">hire me → </button>
+                      </div>
+                      <div class="frame-top-item2">
+                        <img src="images/hero.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mid_frame-bottom">
+                    <div class="bottom-item">
+                      <div class="frame-bottom-top">
+                        <h3 class="services">My Services</h3>
+                        <p>
+                          Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                          amet sint. Velit officia consequat duis enim velit mollit.
+                          lorem ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="frame-bottom-bot">
+                      <div class="bottom_bot-cards">
+                        <div class="back-pic bottom_bot-card">
+                          <img src="icon/coding.svg" />
+                          <p>web development</p>
+                          <span>blog, e-commerce</span>
+                        </div>
+                        <div class="back-pic bottom_bot-card">
+                          <img src="icon/illustration.svg" />
+                          <p>uI/uX design</p>
+                          <span>Mobile app, Website design</span>
+                        </div>
+                        <div class="back-pic bottom_bot-card">
+                          <img src="icon/microphone.svg" />
+                          <p>sound design</p>
+                          <span>Voice Over, Beat Making</span>
+                        </div>
+                        <div class="back-pic bottom_bot-card">
+                          <img src="icon/game.svg" />
+                          <p>game design</p>
+                          <span>Character Design, Props & Objects</span>
+                        </div>
+                        <div class="back-pic bottom_bot-card">
+                          <img src="icon/camera.svg" />
+                          <p>photography</p>
+                          <span>Portrait, Product Photography</span>
+                        </div>
+                        <div class="back-pic bottom_bot-card bot-card">
+                          <p>advertising</p>
+                          <span
+                            >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vitae nulla diam in ab dictum a urna viverra morbi.
+                          </span>
+                          <a href="#" class="order">order now ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="right_frame">
+                  <div class="right_frame-items">
+                    <div class="right_frame-item">
+                      <div class="frame-item1">
+                        <img src="icon/contrast.svg" />
+                      </div>
+                      <div class="frame-item2">
+                        <div class="item2-pos">home</div>
+                        <div class="item2-pos2"></div>
+                        <img src="icon/home.svg" / class="home-bg">
+                        <img src="icon/services.svg" class="mini-icons" />
+                        <img src="icon/cv.svg" class="mini-icons" />
+                        <img src="icon/portfolio.svg" class="mini-icons" />
+                        <img src="icon/blog.svg" class="mini-icons" />
+                        <img src="icon/contact.svg" class="mini-icons" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
         </div>
     </div>
 </body>
