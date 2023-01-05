@@ -590,7 +590,11 @@
   }
   
   .right_frame-item .frame-item1 img {
-    width: 25px;
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    margin-left: 5px;
+    float: inline-start;
   }
   
   .right_frame-item .frame-item2 {
@@ -635,7 +639,7 @@
     opacity: 1;
   }
   
-  .right_frame-item .frame-item2 img {
+ .frame-item2 img {
     padding-bottom: 43px;
     width: 40px;
     opacity: 0.6;

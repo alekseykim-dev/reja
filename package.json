@@ -4,6 +4,7 @@
   "description": "bu bizning birinchi loyihamiz",
   "main": "server.js",
   "scripts": {
+    "author": "nodemon server.js",
     "start": "node server.js",
     "dev": "nodemon server.js",
     "train":"nodemon train.js",
