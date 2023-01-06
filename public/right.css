@@ -1,0 +1,89 @@
+
+  .right_frame-items {
+    height: 700px;
+    display: flex;
+  }
+  
+.right_frame-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+.frame-item1 {
+    margin-top: 50px;
+  }
+  
+.frame-item1 img {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    margin-left: 5px;
+    float: inline-start;
+  }
+  
+.frame-item2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+.item2-post {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background: #000;
+    top: -50px;
+    left: -25px;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+.item2-post-1 {
+    width: 18px;
+    height: 18px;
+    background: #000;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -30px;
+  }
+  
+.frame-item2 .home-back {
+    background: #ffb400;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 11px;
+    margin-left: -10px;
+    margin-bottom: 34px;
+    opacity: 1;
+  }
+  
+ .frame-item2 img {
+    padding-bottom: 43px;
+    width: 40px;
+    opacity: 0.6;
+  }
+
+
+
+ .back-pic {
+
+
+    background-image: url(/author/images/rectangle.png);
+ }
+
+ .order{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFB400;
+
+ }
