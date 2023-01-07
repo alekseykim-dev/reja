@@ -67,36 +67,45 @@
 
 // NodeJS event loop and Callback Function 
 
-console.log('Jack Ma maslahatlari');
+// sync
 
-const list = [
-    'be a good student',    //0-20
-    'choose the right path and make mistakes', // 20-30
-    'start working for yourself',  // 30-40
-    'do what you are good at',      // 40-50
-    'invest in youth',              // 50-60
-    'take it easy now, it is not worth it', // 60
-];
+// console.log('Jack Ma maslahatlari');
+
+// const list = [
+//     'be a good student',    //0-20
+//     'choose the right path and make mistakes', // 20-30
+//     'start working for yourself',  // 30-40
+//     'do what you are good at',      // 40-50
+//     'invest in youth',              // 50-60
+//     'take it easy now, it is not worth it', // 60
+// ];
 
 
-function maslahatBering(a, callback) {          // callback = err, data
-    if(typeof a !== 'number') callback('please input number', null);
-    else if(a <= 20) callback(null, list[0]);
-    else if(a > 20 && a <= 30) callback(null, list[1]); // null=err; list=data
-    else if(a > 30 && a <= 40) callback(null, list[2]);
-    else if(a > 40 && a <= 50) callback(null, list[3]);
-    else if(a > 50 && a <= 60) callback(null, list[4]);
-    else{
-        setTimeout(function() {
-            callback(null, list[5]);
-        }, 5000)
-    }
-}
+// function maslahatBering(a, callback) {          // callback = err, data
+//     if(typeof a !== 'number') callback('please input number', null);
+//     else if(a <= 20) callback(null, list[0]);
+//     else if(a > 20 && a <= 30) callback(null, list[1]); // null=err; list=data
+//     else if(a > 30 && a <= 40) callback(null, list[2]);
+//     else if(a > 40 && a <= 50) callback(null, list[3]);
+//     else if(a > 50 && a <= 60) callback(null, list[4]);
+//     else{
+        // setTimeout(function() {
+//             callback(null, list[5]);
+//         }, 1000)
+//     }
+// }
 
-// maslahatBering(10, (err, data) => {
+
+
+// console.log('passed here 0')
+
+// maslahatBering(70, (err, data) => {
 //     if(err) console.log('ERROR', err);
-//     console.log('javob:', data);
+//     else{
+//      console.log(data)
+//     }    
 // })
+
 // maslahatBering(25, (err, data) => {
 //     if(err) console.log('ERROR:', err);
 //     console.log('javob:', data);
@@ -129,6 +138,121 @@ function maslahatBering(a, callback) {          // callback = err, data
 
 
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// CALLBACK Functions
+const list = [
+    'be a good student',    //0-20
+    'choose the right path and make mistakes', // 20-30
+    'start working for yourself',  // 30-40
+    'do what you are good at',      // 40-50
+    'invest in youth',              // 50-60
+    'take it easy now, it is not worth it', // 60
+];
+
+
+function maslahatBering(a, callback) {          // callback = err, data
+    if(typeof a !== 'number') callback('please input number', null);
+    else if(a <= 20) callback(null, list[0]);
+    else if(a > 20 && a <= 30) callback(null, list[1]); // null=err; list=data
+    else if(a > 30 && a <= 40) callback(null, list[2]);
+    else if(a > 40 && a <= 50) callback(null, list[3]);
+    else if(a > 50 && a <= 60) callback(null, list[4]);
+    else{
+        setInterval(function() {
+            callback(null, list[5]);
+        }, 1000)
+    }
+}
+
+
+
+// console.log('passed here 0')
+
+// maslahatBering(70, (err, data) => {
+//     if(err) console.log('ERROR', err);
+//     else{
+//      console.log(data)
+//     }    
+// })
+
+
+// console.log('pessed here 1')
+
+
+
+
+
+
+// [10]Asynchronous Functions
+
+// const list = [
+//     'be a good student',    //0-20
+//     'choose the right path and make mistakes', // 20-30
+//     'start working for yourself',  // 30-40
+//     'do what you are good at',      // 40-50
+//     'invest in youth',              // 50-60
+//     'take it easy now, it is not worth it', // 60
+// ];
+
+
+// async function maslahatBering(a) {          // throw
+//     if(typeof a !== 'number') throw new Error('please input number');
+//     else if(a <= 20) return list[0];
+//     else if(a > 20 && a <= 30) return list[1]; // no need for callback
+//     else if(a > 30 && a <= 40) return list[2];
+//     else if(a > 40 && a <= 50) return list[3];
+//     else if(a > 50 && a <= 60) return list[4];
+//     else{
+//         return new Promise((resolve, reject) => {           // Promise can have setTIme out
+//             setInterval(() => { // promise implements set interval only once since there is no response from 'javob'
+//                 resolve(list[5]);
+//             }, 1000)
+//         });
+
+//         // setTimeout(function() {          // NO setTimeout in async
+//         //     return list[5];
+//         // }, 5000)
+//     }
+// }
+
+// call with then(data) => catch(err)
+// console.log('passed here 0')
+// maslahatBering(25)                
+//     .then(data => {
+//         console.log('javob:', data);
+//     })
+//     .catch(err => {
+//         console.log('ERROR:'. err);
+//     });
+
+
+// console.log('passed here 1')
+
+
+
+// call with async . await            // awoids promice hell
+// async function run() {
+//     let javob = await maslahatBering(25);
+//     console.log(javob);
+//     javob = await maslahatBering(70);
+//     console.log(javob);
+//     javob = await maslahatBering(41);
+//     console.log(javob);
+// }
+// run();
+
+
+
+
+
+
+
+
+
+
+
 // enginx messages for users, [Jan 6, 2023 11:06:42]:
 // ...
 // 📌  F-Task: findDoubler functionini tuzing, unga string pass bolib, function bu stringda ketma ket ikkita bir hil string qatnashgan bolsa true aks holda false return qilish kerak.
@@ -139,13 +263,43 @@ function maslahatBering(a, callback) {          // callback = err, data
 
 
   
-function findDoubler(word){
-    for (let i in word) {
-        if (word[i-1] === word[i]) return true;
-    }
-    return false;
-}
-  console.log(findDoubler('hello'))    
-  console.log(findDoubler('helola'))      
-  console.log(findDoubler('robert5'))  
-  console.log(findDoubler('success'))    
+// function findDoubler(word){
+//     for (let i in word) {
+//         if (word[i-1] === word[i]) return true;
+//     }
+//     return false;
+// }
+//   console.log(findDoubler('hello'))    
+//   console.log(findDoubler('helola'))      
+//   console.log(findDoubler('robert5'))  
+//   console.log(findDoubler('success'))    
+
+
+
+
+
+
+// ... G-Task: Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga osha arrayning eng katta qiymatiga tegishli birinchi indexsini qaytarsin.
+
+
+// 📌  Masalan: findBig([4, 5, 9, 12,  3]) return qilishi kerak 3ni, yoki findBig([0, 100, 5]) return 1
+
+
+//1. Math max apply
+// const num = [2, 90, 5, 88, 90, 70 ]
+
+// let max = Math.max.apply(Math, num)
+
+// const index = (el) => el === max
+
+// console.log(num.findIndex(index))
+
+
+// //2. Math max spread operator
+// const arr = [2, 90, 5, 88, 90, 70 ]
+
+// const max1 = Math.max(...arr);
+
+// const index1 = arr.indexOf(max1);
+
+// console.log(index1);
