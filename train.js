@@ -197,35 +197,35 @@ function maslahatBering(a, callback) {          // callback = err, data
 // ];
 
 
-// async function maslahatBering(a) {          // throw
-//     if(typeof a !== 'number') throw new Error('please input number');
-//     else if(a <= 20) return list[0];
-//     else if(a > 20 && a <= 30) return list[1]; // no need for callback
-//     else if(a > 30 && a <= 40) return list[2];
-//     else if(a > 40 && a <= 50) return list[3];
-//     else if(a > 50 && a <= 60) return list[4];
-//     else{
-//         return new Promise((resolve, reject) => {           // Promise can have setTIme out
-//             setInterval(() => { // promise implements set interval only once since there is no response from 'javob'
-//                 resolve(list[5]);
-//             }, 1000)
-//         });
+async function maslahatBering(a) {          // throw
+    if(typeof a !== 'number') throw new Error('please input number');
+    else if(a <= 20) return list[0];
+    else if(a > 20 && a <= 30) return list[1]; // no need for callback
+    else if(a > 30 && a <= 40) return list[2];
+    else if(a > 40 && a <= 50) return list[3];
+    else if(a > 50 && a <= 60) return list[4];
+    else{
+        return new Promise((resolve, reject) => {           // Promise can have setTIme out
+            setInterval(() => { // promise implements set interval only once since there is no response from 'javob'
+                resolve(list[5]);
+            }, 1000)
+        });
 
-//         // setTimeout(function() {          // NO setTimeout in async
-//         //     return list[5];
-//         // }, 5000)
-//     }
-// }
+        // setTimeout(function() {          // NO setTimeout in async
+        //     return list[5];
+        // }, 5000)
+    }
+}
 
 // call with then(data) => catch(err)
-// console.log('passed here 0')
-// maslahatBering(25)                
-//     .then(data => {
-//         console.log('javob:', data);
-//     })
-//     .catch(err => {
-//         console.log('ERROR:'. err);
-//     });
+console.log('passed here 0')
+maslahatBering(25)                
+    .then(data => {
+        console.log('javob:', data);
+    })
+    .catch(err => {
+        console.log('ERROR:'. err);
+    });
 
 
 // console.log('passed here 1')
@@ -277,7 +277,7 @@ function maslahatBering(a, callback) {          // callback = err, data
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // ... G-Task: Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga osha arrayning eng katta qiymatiga tegishli birinchi indexsini qaytarsin.
 
@@ -285,21 +285,21 @@ function maslahatBering(a, callback) {          // callback = err, data
 // 📌  Masalan: findBig([4, 5, 9, 12,  3]) return qilishi kerak 3ni, yoki findBig([0, 100, 5]) return 1
 
 
-//1. Math max apply
-// const num = [2, 90, 5, 88, 90, 70 ]
+// 1. Math max apply
+const num = [2, 90, 5, 88, 90, 70 ]
 
-// let max = Math.max.apply(Math, num)
+let max = Math.max.apply(Math, num)
 
-// const index = (el) => el === max
+const index = (el) => el === max
 
-// console.log(num.findIndex(index))
+console.log(num.findIndex(index))
 
 
-// //2. Math max spread operator
-// const arr = [2, 90, 5, 88, 90, 70 ]
+//2. Math max spread operator
+const arr = [2, 90, 5, 88, 90, 70 ]
 
-// const max1 = Math.max(...arr);
+const max1 = Math.max(...arr);
 
-// const index1 = arr.indexOf(max1);
+const index1 = arr.indexOf(max1);
 
-// console.log(index1);
+console.log(index1);
