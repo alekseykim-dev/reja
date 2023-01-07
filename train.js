@@ -110,15 +110,15 @@ function maslahatBering(a, callback) {          // callback = err, data
 //     console.log('javob:', data);
 // })
 
-console.log('passed here 0')
+// console.log('passed here 0')
 
-maslahatBering(65, (err, data) => {
-    if(err) console.log('ERROR', err);
-    else  console.log('javob:', data);
+// maslahatBering(65, (err, data) => {
+//     if(err) console.log('ERROR', err);
+//     else  console.log('javob:', data);
 
-})
+// })
 
-console.log('pessed here 1')
+// console.log('pessed here 1')
 
 
 
@@ -138,22 +138,14 @@ console.log('pessed here 1')
 // 📌  Masalan: findDoubler('hello') return true, yoki findDoubler('helola') return false yoki findDoubler('robert5') return false.
 
 
-
-let findDoubler = (word) => {
-    
-    let set = new Set();
-
-    for(let i in word){
-     if(word[i] !== ' '){
-      if(set.has(word[i])) return true;
-        else set.add(word[i]);
-      }
-    } 
-    return false;
-  }
-
-  console.log(findDoubler('hello'))     // true
-  console.log(findDoubler('alex'))      // flase
-  console.log(findDoubler('sleeping'))  // true
-  console.log(findDoubler('coding'))    // false
   
+function findDoubler(word){
+    for (let i in word) {
+        if (word[i-1] === word[i]) return true;
+    }
+    return false;
+}
+  console.log(findDoubler('hello'))    
+  console.log(findDoubler('helola'))      
+  console.log(findDoubler('robert5'))  
+  console.log(findDoubler('success'))    
