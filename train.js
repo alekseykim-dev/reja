@@ -285,21 +285,40 @@ maslahatBering(25)
 // 📌  Masalan: findBig([4, 5, 9, 12,  3]) return qilishi kerak 3ni, yoki findBig([0, 100, 5]) return 1
 
 
-// 1. Math max apply
-const num = [2, 90, 5, 88, 90, 70 ]
+// // 1. Math max apply
+// const num = [2, 90, 5, 88, 90, 70 ]
 
-let max = Math.max.apply(Math, num)
+// let max = Math.max.apply(Math, num)
 
-const index = (el) => el === max
+// const index = (el) => el === max
 
-console.log(num.findIndex(index))
+// console.log(num.findIndex(index))
 
 
-//2. Math max spread operator
-const arr = [2, 90, 5, 88, 90, 70 ]
+// //2. Math max spread operator
+// const arr = [2, 90, 5, 88, 90, 70 ]
 
-const max1 = Math.max(...arr);
+// const max1 = Math.max(...arr);
 
-const index1 = arr.indexOf(max1);
+// const index1 = arr.indexOf(max1);
 
-console.log(index1);
+// console.log(index1);
+
+
+function findBig(arr) {
+    if (arr.length === 0) return -1;
+
+    let max = arr[0];
+    let maxIndex = 0;
+
+    for (let i in arr) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+    return maxIndex;
+}
+console.log(findBig([2, 90, 5, 88, 90, 70 ]))
+
+
