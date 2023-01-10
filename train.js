@@ -215,7 +215,7 @@ async function maslahatBering(a) {          // throw
         //     return list[5];
         // }, 5000)
     }
-}
+};
 
 // call with then(data) => catch(err)
 console.log('passed here 0')
@@ -233,15 +233,15 @@ maslahatBering(25)
 
 
 // call with async . await            // awoids promice hell
-// async function run() {
-//     let javob = await maslahatBering(25);
-//     console.log(javob);
-//     javob = await maslahatBering(70);
-//     console.log(javob);
-//     javob = await maslahatBering(41);
-//     console.log(javob);
-// }
-// run();
+async function run() {
+    let javob = await maslahatBering(25);
+    console.log(javob);
+    javob = await maslahatBering(70);
+    console.log(javob);
+    javob = await maslahatBering(41);
+    console.log(javob);
+}
+run();
 
 
 
@@ -322,3 +322,45 @@ function findBig(arr) {
 console.log(findBig([2, 90, 5, 88, 90, 70 ]))
 
 
+
+
+
+
+async function number(num) {
+    if(typeof num !== 'number') throw new Error('not a number');
+    else if (num >= 20) return '20dan katta';
+    else if (num >= 30) return '30dan katta';
+    else if (num >= 40) return '40dan katta';
+    else if (num >= 50) return '50dan katta';
+    else return '100dan katta';
+    
+}
+number(20).then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+})
+
+
+
+
+
+const numb = ['100dan kam', '100dan kop']
+
+function checkk(a, callback) {
+    if (typeof a !== 'number') callback ('not a number', null)
+    else if(a < 100) callback(null, numb[0])
+    else  callback(null, numb[1])
+
+}
+
+
+
+checkk(70, (err, data) => {
+    if(err) {
+        console.log('ERROR', err)
+    }
+    else{
+     console.log('javob', data)
+    }    
+})
