@@ -20,7 +20,7 @@
             <div class="d-flex align-items-center">
               <input
               id="create-field"
-              name="item"
+              name="reja"
               autofocus
               autocomplete="off"
               class="form-control mr-3"
@@ -34,9 +34,45 @@
            
           </form>
         </div>
-        <button class="btn btn-danger" style="border-radius: 20px">
+
+        <ul id="item-list" class="list-group pb-5">
+          <% items.map(function(item){ %>
+            <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+              <span class="item-text">
+                <%=item.reja%>
+              </span>
+              <div>
+                <button 
+                  data-id="<%=item._id%>" 
+                  class="edit-me btn btn-secondary btn-sm mr-1"
+                  >
+                  Ozgartirish
+                </button>
+                <button data-id="<%=item._id%>" class="delete-me btn btn-danger btn-sm">Ochirish</button>
+              </div>
+            </li>
+            <% }) %>
+        </ul>
+
+
+
+        <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
           Hamma Rejalarni Ochirish
           </button>
       </div>
   </body>
 </html>
+
+
+
+<!-- <ul id="'item-list" class="list-group pb-5">
+  <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+    <span class="item-text"></span>
+  </li>
+</ul>
+</div>
+<button class="btn btn-danger" style="border-radius: 20px">
+  Hamma Rejalarni Ochirish
+  </button>
+  <button class="delete-me btn btn-danger btn-sm">Ochirish</button>
+</div> -->

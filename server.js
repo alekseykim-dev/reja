@@ -15,9 +15,9 @@ mongodb.connect(
     else {
         console.log('MongoDB connection succeed')
         module.exports = client;
-
-        console.log(client)
+        // console.log(client)
       const app = require("./app");
+      
       const server = http.createServer(app);
       let PORT = 3000;
       server.listen(PORT, function () {
