@@ -328,10 +328,10 @@ console.log(findBig([2, 90, 5, 88, 90, 70 ]))
 
 async function number(num) {
     if(typeof num !== 'number') throw new Error('not a number');
-    else if (num >= 20) return '20dan katta';
-    else if (num >= 30) return '30dan katta';
-    else if (num >= 40) return '40dan katta';
-    else if (num >= 50) return '50dan katta';
+    else if (num > 20) return '20dan katta';
+    else if (num > 30) return '30dan katta';
+    else if (num > 40) return '40dan katta';
+    else if (num > 50) return '50dan katta';
     else return '100dan katta';
     
 }
@@ -356,11 +356,11 @@ function checkk(a, callback) {
 
 
 
-checkk(70, (err, data) => {
+checkk(100, (err, data) => {
     if(err) {
         console.log('ERROR', err)
     }
     else{
-     console.log('javob', data)
+     console.log('result:', data)
     }    
 })
