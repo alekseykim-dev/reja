@@ -21,6 +21,7 @@ fs.readFile('database/user.json', 'utf8', (err, data) => {
 })
 // MongoDB call
 const db = require('./server').db()
+const mongodb = require('mongodb')
 
 
 // 1. Kirish code
@@ -49,6 +50,13 @@ app.post('/create-item', (req, res) => {
     // res.json({ test: 'success' });
 });
 
+app.post('/delete-item', (req, res) => {
+    const id = req.body.id;
+    console.log(id)
+    db.collection('plans').deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+        res.json({state: 'success'});
+    });
+});
 app.get('/author', (req, res) => {
     res.render('author', {user: user});
 })
