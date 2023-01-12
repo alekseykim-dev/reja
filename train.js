@@ -142,29 +142,29 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // CALLBACK Functions
-const list = [
-    'be a good student',    //0-20
-    'choose the right path and make mistakes', // 20-30
-    'start working for yourself',  // 30-40
-    'do what you are good at',      // 40-50
-    'invest in youth',              // 50-60
-    'take it easy now, it is not worth it', // 60
-];
+// const list = [
+//     'be a good student',    //0-20
+//     'choose the right path and make mistakes', // 20-30
+//     'start working for yourself',  // 30-40
+//     'do what you are good at',      // 40-50
+//     'invest in youth',              // 50-60
+//     'take it easy now, it is not worth it', // 60
+// ];
 
 
-function maslahatBering(a, callback) {          // callback = err, data
-    if(typeof a !== 'number') callback('please input number', null);
-    else if(a <= 20) callback(null, list[0]);
-    else if(a > 20 && a <= 30) callback(null, list[1]); // null=err; list=data
-    else if(a > 30 && a <= 40) callback(null, list[2]);
-    else if(a > 40 && a <= 50) callback(null, list[3]);
-    else if(a > 50 && a <= 60) callback(null, list[4]);
-    else{
-        setInterval(function() {
-            callback(null, list[5]);
-        }, 1000)
-    }
-}
+// function maslahatBering(a, callback) {          // callback = err, data
+//     if(typeof a !== 'number') callback('please input number', null);
+//     else if(a <= 20) callback(null, list[0]);
+//     else if(a > 20 && a <= 30) callback(null, list[1]); // null=err; list=data
+//     else if(a > 30 && a <= 40) callback(null, list[2]);
+//     else if(a > 40 && a <= 50) callback(null, list[3]);
+//     else if(a > 50 && a <= 60) callback(null, list[4]);
+//     else{
+//         setInterval(function() {
+//             callback(null, list[5]);
+//         }, 1000)
+//     }
+// }
 
 
 
@@ -197,51 +197,51 @@ function maslahatBering(a, callback) {          // callback = err, data
 // ];
 
 
-async function maslahatBering(a) {          // throw
-    if(typeof a !== 'number') throw new Error('please input number');
-    else if(a <= 20) return list[0];
-    else if(a > 20 && a <= 30) return list[1]; // no need for callback
-    else if(a > 30 && a <= 40) return list[2];
-    else if(a > 40 && a <= 50) return list[3];
-    else if(a > 50 && a <= 60) return list[4];
-    else{
-        return new Promise((resolve, reject) => {           // Promise can have setTIme out
-            setInterval(() => { // promise implements set interval only once since there is no response from 'javob'
-                resolve(list[5]);
-            }, 1000)
-        });
+// async function maslahatBering(a) {          // throw
+//     if(typeof a !== 'number') throw new Error('please input number');
+//     else if(a <= 20) return list[0];
+//     else if(a > 20 && a <= 30) return list[1]; // no need for callback
+//     else if(a > 30 && a <= 40) return list[2];
+//     else if(a > 40 && a <= 50) return list[3];
+//     else if(a > 50 && a <= 60) return list[4];
+//     else{
+//         return new Promise((resolve, reject) => {           // Promise can have setTIme out
+//             setInterval(() => { // promise implements set interval only once since there is no response from 'javob'
+//                 resolve(list[5]);
+//             }, 1000)
+//         });
 
-        // setTimeout(function() {          // NO setTimeout in async
-        //     return list[5];
-        // }, 5000)
-    }
-};
+//         // setTimeout(function() {          // NO setTimeout in async
+//         //     return list[5];
+//         // }, 5000)
+//     }
+// };
 
 // call with then(data) => catch(err)
-console.log('passed here 0')
-maslahatBering(25)                
-    .then(data => {
-        console.log('javob:', data);
-    })
-    .catch(err => {
-        console.log('ERROR:'. err);
-    });
+// console.log('passed here 0')
+// maslahatBering(25)                
+//     .then(data => {
+//         console.log('javob:', data);
+//     })
+//     .catch(err => {
+//         console.log('ERROR:'. err);
+//     });
 
 
-// console.log('passed here 1')
+// // console.log('passed here 1')
 
 
 
-// call with async . await            // awoids promice hell
-async function run() {
-    let javob = await maslahatBering(25);
-    console.log(javob);
-    javob = await maslahatBering(70);
-    console.log(javob);
-    javob = await maslahatBering(41);
-    console.log(javob);
-}
-run();
+// // call with async . await            // awoids promice hell
+// async function run() {
+//     let javob = await maslahatBering(25);
+//     console.log(javob);
+//     javob = await maslahatBering(70);
+//     console.log(javob);
+//     javob = await maslahatBering(41);
+//     console.log(javob);
+// }
+// run();
 
 
 
@@ -305,62 +305,75 @@ run();
 // console.log(index1);
 
 
-function findBig(arr) {
-    if (arr.length === 0) return -1;
+// function findBig(arr) {
+//     if (arr.length === 0) return -1;
 
-    let max = arr[0];
-    let maxIndex = 0;
+//     let max = arr[0];
+//     let maxIndex = 0;
 
-    for (let i in arr) {
-        if (arr[i] > max) {
-            maxIndex = i;
-            max = arr[i];
-        }
-    }
-    return maxIndex;
-}
-console.log(findBig([2, 90, 5, 88, 90, 70 ]))
-
-
+//     for (let i in arr) {
+//         if (arr[i] > max) {
+//             maxIndex = i;
+//             max = arr[i];
+//         }
+//     }
+//     return maxIndex;
+// }
+// console.log(findBig([2, 90, 5, 88, 90, 70 ]))
 
 
 
 
-async function number(num) {
-    if(typeof num !== 'number') throw new Error('not a number');
-    else if (num > 20) return '20dan katta';
-    else if (num > 30) return '30dan katta';
-    else if (num > 40) return '40dan katta';
-    else if (num > 50) return '50dan katta';
-    else return '100dan katta';
+
+
+// async function number(num) {
+//     if(typeof num !== 'number') throw new Error('not a number');
+//     else if (num > 20) return '20dan katta';
+//     else if (num > 30) return '30dan katta';
+//     else if (num > 40) return '40dan katta';
+//     else if (num > 50) return '50dan katta';
+//     else return '100dan katta';
     
+// }
+// number(20).then(data => {
+//     console.log(data)
+// }).catch(err => {
+//     console.log(err)
+// })
+
+
+
+
+
+// const numb = ['100dan kam', '100dan kop']
+
+// function checkk(a, callback) {
+//     if (typeof a !== 'number') callback ('not a number', null)
+//     else if(a < 100) callback(null, numb[0])
+//     else  callback(null, numb[1])
+
+// }
+
+
+
+// checkk(100, (err, data) => {
+//     if(err) {
+//         console.log('ERROR', err)
+//     }
+//     else{
+//      console.log('result:', data)
+//     }    
+// })
+
+
+
+
+
+// 📌  H-Task: Kiritilgan stringni teskari qilib chiqaradigan function tuzing, masalan: reverseString("javascript") return qilishi kerak "tpircsavaj".
+
+
+function reverseString(word) {
+    return word.split('').reverse().join('')
 }
-number(20).then(data => {
-    console.log(data)
-}).catch(err => {
-    console.log(err)
-})
 
-
-
-
-
-const numb = ['100dan kam', '100dan kop']
-
-function checkk(a, callback) {
-    if (typeof a !== 'number') callback ('not a number', null)
-    else if(a < 100) callback(null, numb[0])
-    else  callback(null, numb[1])
-
-}
-
-
-
-checkk(100, (err, data) => {
-    if(err) {
-        console.log('ERROR', err)
-    }
-    else{
-     console.log('result:', data)
-    }    
-})
+console.log(reverseString('JavaScript'))
