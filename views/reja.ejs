@@ -10,8 +10,9 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/quote.css">
   </head>
-  <body style="background: url('https://source.unsplash.com/1600x900/?sunset') no-repeat">
+  <body style="background: url('https://source.unsplash.com/1920x1080/?sunset') no-repeat">
       <div class="container ">
         <h1 class="display-5 text-center text-light py-1 mt-3 "> PLANS AND TASKS</h1>
 
@@ -57,6 +58,19 @@
         <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
           Delete All
           </button>
+         
+          
+      </div>
+      <div class="wrapper1">
+        <div class="container1">
+          <h4>Quote of the day</h4>
+          <div class="display1">
+            <p id="quote">
+            </p>
+            <h5 id="author"></h5>
+              </div>
+              <button id="btn">Get Quote</button>
+        </div>
       </div>
       <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
       <script src="/browser.js"></script>
