@@ -1,7 +1,7 @@
 console.log("FrontEnd Js ishga tushdi");
 
 function itemTemplate(item) {
-  return `<li class=" bg-light text-dark list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+  return `<li class=" text-white list-group-item list-group-item-info d-flex align-items-center justify-content-between" style="background: #000000d0;">
     <span class="item-text">${item.reja}</span>
     <div>
       <button 

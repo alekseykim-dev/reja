@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="background: url('https://source.unsplash.com/1920x1080/?sunset') no-repeat">
+  <body style="background: url('https://source.unsplash.com/1920x1080/?sunset') no-repeat; background-size: cover;">
       <div class="container ">
         <h1 class="display-5 text-center text-light py-1 mt-3 "> PLANS AND TASKS</h1>
 
@@ -25,7 +25,7 @@
               autocomplete="off"
               class="form-control mr-3"
               type="text" 
-              style="flex: 1"
+              style="flex: 1; background: #000000d0; color: aliceblue;"
               >
               <button class="btn btn-primary" style="border-radius: 20px">
               Add a new task
@@ -38,7 +38,7 @@
         <ul id="item-list" class="list-group 
         pb-5" >
           <% items.map(function(item){ %>
-            <li class="bg-light text-dark list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+            <li class=" text-white list-group-item list-group-item-info d-flex align-items-center justify-content-between" style="background: #000000d0;">
               <span class="item-text">
                 <%=item.reja%>
               </span>
@@ -63,14 +63,14 @@
 
         
          
-          <div class="text-center  bg-white mt-4 " style="border-radius: 5px;" >
+          <div class="text-center  mt-4 " style="border-radius: 5px; background: #000000d0;" >
             <h5 class=" text-center text-muted">Quote of the day</h5>
 
             <blockquote class="blockquote text-center">
-              <p class="mb-0 h6"><em id="quote"> </em></p>
+              <p class="mb-0 h6 text-white"><em id="quote"> </em></p>
               <footer id="author" class="blockquote-footer h6"> Recieving a quote...</footer>
             </blockquote>
-            <button id="btn" class="btn btn-primary text-center mb-1" style="border-radius: 20px">
+            <button id="btn" class="btn btn-primary text-center mb-1" style="border-radius: 20px; opacity: 100%;">
               Get quote
               </button>
           </div>
