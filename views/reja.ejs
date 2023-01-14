@@ -10,7 +10,6 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/quote.css">
   </head>
   <body style="background: url('https://source.unsplash.com/1920x1080/?sunset') no-repeat">
       <div class="container ">
@@ -54,24 +53,29 @@
         </ul>
 
 
+    
 
         <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
           Delete All
           </button>
+
+        
+
+        
          
-          
+          <div class="text-center  bg-white mt-4 " style="border-radius: 5px;" >
+            <h5 class=" text-center text-muted">Quote of the day</h5>
+
+            <blockquote class="blockquote text-center">
+              <p class="mb-0 h6"><em id="quote"> </em></p>
+              <footer id="author" class="blockquote-footer h6"> Recieving a quote...</footer>
+            </blockquote>
+            <button id="btn" class="btn btn-primary text-center mb-1" style="border-radius: 20px">
+              Get quote
+              </button>
+          </div>
       </div>
-      <div class="wrapper1">
-        <div class="container1">
-          <h4>Quote of the day</h4>
-          <div class="display1">
-            <p id="quote">
-            </p>
-            <h5 id="author"></h5>
-              </div>
-              <button id="btn">Get Quote</button>
-        </div>
-      </div>
+      
       <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
       <script src="/browser.js"></script>
   </body>
