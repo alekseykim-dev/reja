@@ -60,14 +60,14 @@ let btn = document.getElementById("btn");
 
 const url = "https://api.quotable.io/random";
 
-
 let getQuote = () => {
   fetch(url)
     .then((data) => data.json())
     .then((item) => {
       quote.innerText = item.content;
       author.innerText = item.author;
-    });
+    })
+    .catch((err) => console.log("ERROR", err));
 };
 
 window.addEventListener("load", getQuote);

@@ -372,8 +372,25 @@
 // 📌  H-Task: Kiritilgan stringni teskari qilib chiqaradigan function tuzing, masalan: reverseString("javascript") return qilishi kerak "tpircsavaj".
 
 
-function reverseString(word) {
-    return word.split('').reverse().join('')
-}
+// function reverseString(word) {
+//     return word.split('').reverse().join('')
+// }
 
-console.log(reverseString('JavaScript'))
+// console.log(reverseString('JavaScript'))
+
+
+
+
+
+// 📌  I-Task: Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive yani noldan yuqori qiymatlarni arrayda return qilsin
+
+// 📩 New message from group : 
+
+// 📌  Masalan: getPositive([0, -15, 5, -3, 2, -8, 9, -11]) return qilishi kerak [5, 2, 9]
+
+
+function getPositive(arr) {
+  return arr.filter((a) => a > 0)
+}
+console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));
+
