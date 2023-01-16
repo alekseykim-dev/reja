@@ -1,3 +1,5 @@
+// const { response } = require("./app");
+
 console.log("FrontEnd Js ishga tushdi");
 
 function itemTemplate(item) {
@@ -13,6 +15,7 @@ function itemTemplate(item) {
     </div>
   </li>`;
 }
+
 let createField = document.getElementById("create-field");
 document.getElementById("create-form").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -38,21 +41,41 @@ document.addEventListener("click", function (e) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((response) => {
-            console.log(response.data);
-            e.target.parentElement.parentElement.remove()
+          console.log(response.data);
+          e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {
-            console.log('Please, try again!')
-
+          console.log("Please, try again!");
         });
     }
   }
-
+  // edit operation
   if (e.target.classList.contains("edit-me")) {
-    alert("siz edit tugmasini bosdingiz");
+    // alert("siz edit tugmasini bosdingiz");
+    let userInput = prompt(
+      'Input text',
+      e.target.parentElement.parentElement.querySelector(".item-text").innerText
+    );
+    if (userInput) {
+      axios.post('/edit-item', { id: e.target.getAttribute("data-id"), new_input: userInput,}).then(response =>{
+        console.log(response.data)
+        e.target.parentElement.parentElement.querySelector('.item-text').innerHTML = userInput;
+      }).catch(err => {
+        console.log('Please, try again!')
+      })
+    }
   }
 });
 
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  if (confirm("Don't delete me please, Jonibek😭")) {
+    axios.post("/delete-all", { delete_all: true }).then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    });
+  }
+});
 
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
