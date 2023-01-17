@@ -389,8 +389,8 @@
 // 📌  Masalan: getPositive([0, -15, 5, -3, 2, -8, 9, -11]) return qilishi kerak [5, 2, 9]
 
 
-function getPositive(arr) {
-  return arr.filter((a) => a > 0)
-}
-console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));
+// function getPositive(arr) {
+//   return arr.filter((a) => a > 0)
+// }
+// console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));
 
