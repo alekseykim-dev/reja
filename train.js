@@ -394,3 +394,15 @@
 // }
 // console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));
 
+
+
+// 📌  J-Task: shunday function tuzing, uning parametri integer bolib, agar argument musbat bolsa 1, manfiy bolsa -1, nolga teng bolsa 0 soni return qilsin.
+function check (num) {
+  
+        if(num === 0) return 0
+        else if(num > 0) return 1
+        else return -1
+      } 
+      console.log(check(0))
+      console.log(check(20))
+      console.log(check(-20))
