@@ -69,7 +69,7 @@ document.addEventListener("click", function (e) {
 
 
 document.getElementById("clean-all").addEventListener("click", function () {
-  if (confirm("Don't delete me please, Jonibek😭")) {
+  if (confirm("Are you sure?")) {
     axios.post("/delete-all", { delete_all: true }).then((response) => {
       alert(response.data.state);
       document.location.reload();
